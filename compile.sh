@@ -289,18 +289,15 @@ else
 				CFLAGS="-m64 $CFLAGS"
 			fi
 			GMP_ABI="64"
-		else
-			echo "[ERROR] PocketMine-MP is no longer supported on 32-bit systems"
-			exit 1
 		fi
 	fi
 fi
 
 if [ "$DO_STATIC" == "yes" ]; then
 	HAVE_OPCACHE="no" #doesn't work on static builds
-	echo "[warning] OPcache cannot be used on static builds; this may have a negative effect on performance"
+	echo "[warning] cannot be used on static builds; this may have a negative effect on performance"
 	if [ "$FSANITIZE_OPTIONS" != "" ]; then
-		echo "[warning] Sanitizers cannot be used on static builds"
+		echo "[warning] Sanitizers cannot be on static builds"
 	fi
 fi
 
