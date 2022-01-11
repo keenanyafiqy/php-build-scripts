@@ -49,11 +49,6 @@ while getopts "rucid:v:t:" opt; do
 done
 
 
-if [ `getconf LONG_BIT` == "32" ]; then
-	echo "[ERROR] PocketMine-MP is no longer supported on 32-bit systems."
-	exit 1
-fi
-
 #Needed to use aliases
 shopt -s expand_aliases
 type wget > /dev/null 2>&1
